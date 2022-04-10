@@ -12,6 +12,9 @@ module.exports = {
     './lib/**/*.js',
     './data/**/*.mdx',
   ],
+  images: {
+    domains: ['*.albourane.com', '*.imgur.com', 'albourane.com', 'imgur.com'],
+  },
   darkMode: 'class',
   theme: {
     extend: {
@@ -25,7 +28,7 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+        sans: ['Tajawal', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: colors.teal,

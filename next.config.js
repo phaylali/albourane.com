@@ -58,6 +58,9 @@ module.exports = withBundleAnalyzer({
   eslint: {
     dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
   },
+  images: {
+    domains: ['storage.albourane.com', 'i.imgur.com'],
+  },
   async headers() {
     return [
       {

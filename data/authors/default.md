@@ -1,16 +1,13 @@
 ---
-name: Tails Azimuth
+name: تعاونية ألبوران
 avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
-email: address@yoursite.com
-twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com
-github: https://github.com
+occupation: تعاونية الصيد البحري التقليدي بوادي لو
+company: وادي لو
+email: help@albourane.com
+twitter: https://twitter.com/albourane
+facebook: https://www.facebook.com/albouane
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
+تعاونية ألبوران للصيد البحري التقليدي بوادلو، بدأت نشاطها مع افتتاح نقطة التفريغ المجهزة بوادلو والتي تتخذها مقرا لها
 
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+تسعى التعاونية الى تطوير قطاع الصيد البحري التقليدي بوادلو وتحسين ظروف عمل بحارة المنطقة وكذا إيجاد أسواق جديدة و فرص للرفع من مدخولهم و تسوية أوضاعهم، فضلا عن تكوين بحارة جدد لسد الخصاص الحاصل في هذا المجال و عدة خدمات و أنشطة أخرى
