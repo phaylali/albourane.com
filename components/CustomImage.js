@@ -6,16 +6,15 @@ export default function CustomImage({ alt, ...props }) {
 
   return (
     <Image
-      {...props}
-      src={`/api/imagefetcher?url=${encodeURIComponent(src)}`}
-      alt={alt} // To fix lint warning
-      onError={() => setSrc('/public/static/images/image-error.png')}
+      src={`${src}`}
+      alt={`${alt} Cover`}
       placeholder="blur"
       blurDataURL="/public/static/images/image-placeholder.png"
-      width={350}
-      height={350}
+      width={400}
+      height={300}
       quality={80}
-      layout="fill"
+      layout="responsive"
+      loading="lazy"
     />
   )
 }

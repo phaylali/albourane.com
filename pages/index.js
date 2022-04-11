@@ -6,6 +6,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 
 import NewsletterForm from '@/components/NewsletterForm'
+import CustomImage from '@/components/CustomImage'
 
 const MAX_DISPLAY = 5
 
@@ -29,48 +30,57 @@ export default function Home({ posts }) {
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
+          {!posts.length && 'لا يوجد مقالات'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+            const { slug, date, title, summary, tags, image } = frontMatter
             return (
               <li key={slug} className="py-12">
                 <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                  <div className="space-y-2 xl:grid xl:grid-cols-3 xl:space-y-0">
                     <dl>
                       <dt className="sr-only">نشرت في</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      <dd className="text-base font-medium leading-6 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                         <time dateTime={date}>{formatDate(date)}</time>
                       </dd>
                     </dl>
-                    <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-6">
-                        <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
-                            >
-                              {title}
-                            </Link>
-                          </h2>
-                          <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
+
+                    <div className="flex flex-col items-center sm:flex-row xl:col-span-3">
+                      <div className="mx-2 my-8 w-full sm:my-0 sm:w-1/3">
+                        <Link href={`/blog/${slug}`}>
+                          <div className="overflow-hidden rounded-xl sm:px-0">
+                            <CustomImage src={`${image}`} alt={`${title} Cover`}></CustomImage>
                           </div>
-                        </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                          {summary}
-                        </div>
-                      </div>
-                      <div className="text-base font-medium leading-6">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                          aria-label={`Read "${title}"`}
-                        >
-                          اقرا المزيد &rarr;
                         </Link>
+                      </div>
+                      <div className="mx-2 w-full sm:w-2/3">
+                        <div>
+                          <div>
+                            <h2 className="text-2xl font-bold">
+                              <Link
+                                href={`/blog/${slug}`}
+                                data-cy="post-title"
+                                className="hover:border-brand border-b-2 border-transparent duration-300 dark:text-gray-50"
+                              >
+                                {title}
+                              </Link>
+                            </h2>
+                            <div className="flex flex-wrap ">
+                              {tags.map((tag) => (
+                                <Tag key={tag} text={tag} />
+                              ))}
+                            </div>
+                          </div>
+                          <div className="text-typeface-secondary dark:text-typeface-secondary-dark mb-8 mt-6 font-medium text-gray-500 dark:text-gray-400">
+                            {summary}
+                          </div>
+                          <Link
+                            href={`/blog/${slug}`}
+                            aria-label={`Read "${title}"`}
+                            className="hover:border-brand mr-3 border-b-2 border-transparent text-sm font-medium uppercase text-primary-500 duration-300 hover:text-primary-600 dark:hover:text-primary-400"
+                          >
+                            اقرأ المزيد &rarr;
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -87,7 +97,7 @@ export default function Home({ posts }) {
             className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
             aria-label="all posts"
           >
-            All Posts &rarr;
+            كل المقالات &rarr;
           </Link>
         </div>
       )}

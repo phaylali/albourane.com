@@ -12,7 +12,11 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link href="https://fonts.googleapis.com/css2?family=Tajawal" rel="stylesheet" />
-
+          <script
+            defer
+            src="https://chirpy.dev/bootstrap/comment.js"
+            data-chirpy-domain="albourane.com"
+          ></script>
           <link
             rel="icon"
             type="image/png"
