@@ -62,7 +62,7 @@ I wanted it to be nearly as feature-rich as popular blogging templates like [bea
 - Mobile-friendly view
 - Light and dark theme
 - Self-hosted font with [Fontsource](https://fontsource.org/)
-- Supports [plausible](https://plausible.io/), [simple analytics](https://simpleanalytics.com/) and google analytics
+- Supports google analytics
 - [MDX - write JSX in markdown documents!](https://mdxjs.com/)
 - Server-side syntax highlighting with line numbers and line highlighting via [rehype-prism-plus](https://github.com/timlrx/rehype-prism-plus)
 - Math display supported via [KaTeX](https://katex.org/)
@@ -74,8 +74,7 @@ I wanted it to be nearly as feature-rich as popular blogging templates like [bea
 - Blog templates
 - TOC component
 - Support for nested routing of blog posts
-- Newsletter component with support for mailchimp, buttondown, convertkit, klaviyo and revue
-- Supports [giscus](https://github.com/laymonage/giscus), [utterances](https://github.com/utterance/utterances) or disqus
+- Supports disqus
 - Projects page
 - Preconfigured security headers
 - SEO friendly with RSS feed, sitemaps and more!
@@ -111,7 +110,7 @@ npx degit timlrx/tailwind-nextjs-starter-blog#typescript
 
 2. Personalize `siteMetadata.js` (site related information)
 3. Modify the content security policy in `next.config.js` if you want to use
-   any analytics provider or a commenting solution other than giscus.
+   google analytics.
 4. Personalize `authors/default.md` (main author)
 5. Modify `projectsData.js`
 6. Modify `headerNavLinks.js` to customize navigation links

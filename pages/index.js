@@ -5,7 +5,6 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 
-import NewsletterForm from '@/components/NewsletterForm'
 import CustomImage from '@/components/CustomImage'
 
 const MAX_DISPLAY = 5
@@ -99,11 +98,6 @@ export default function Home({ posts }) {
           >
             كل المقالات &rarr;
           </Link>
-        </div>
-      )}
-      {siteMetadata.newsletter.provider !== '' && (
-        <div className="flex items-center justify-center pt-4">
-          <NewsletterForm />
         </div>
       )}
     </>
