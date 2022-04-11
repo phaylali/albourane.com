@@ -5,8 +5,10 @@ import { BlogSEO } from '@/components/SEO'
 import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import DisqusComments from '@/components/Disqus'
+import DisqusComponent from '@/components/comments/Disqus'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import Comments from '@/components/Disqus'
+
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -66,15 +68,12 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 <ul className="flex justify-center space-x-8 sm:space-x-12 xl:block xl:space-x-0 xl:space-y-8">
                   {authorDetails.map((author) => (
                     <li className="flex items-center space-x-2" key={author.name}>
-                      {author.avatar && (
-                        <Image
-                          src={author.avatar}
-                          width="38px"
-                          height="38px"
-                          alt="avatar"
-                          className="h-10 w-10 rounded-full"
-                        />
-                      )}
+                      <Image
+                        src={siteMetadata.miniAvatar}
+                        width="38px"
+                        height="38px"
+                        alt="avatar"
+                      />
                       <dl className="whitespace-nowrap text-sm font-medium leading-5">
                         <dt className="sr-only">Name</dt>
                         <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
@@ -100,6 +99,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <h2 className="text-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">
                 انشر المقال
               </h2>
+
               <FacebookShareButton
                 url={`${siteMetadata.siteUrl}/blog/${slug}`}
                 quote={`${title}`}
@@ -135,12 +135,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <EmailShareButton
                 url={`${siteMetadata.siteUrl}/blog/${slug}`}
                 subject={`${title}`}
-                body="body"
+                body={`${title}`}
               >
                 <EmailIcon size={32} round />
               </EmailShareButton>
-
-              <DisqusComments slug={slug} title={title} />
             </div>
 
             <footer>
@@ -191,6 +189,9 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 </Link>
               </div>
             </footer>
+          </div>
+          <div className="py-4 xl:py-8">
+            <Comments slug={`${slug}`} title={`${title}`}></Comments>
           </div>
         </div>
       </article>

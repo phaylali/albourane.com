@@ -1,6 +1,6 @@
 ---
 name: تعاونية ألبوران
-avatar: /static/images/logo.png
+avatar: /static/images/avatar.png
 occupation: تعاونية الصيد البحري التقليدي بوادي لو
 company: وادي لو
 email: help@albourane.com
