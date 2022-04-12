@@ -22,19 +22,6 @@ const siteMetadata = {
   analytics: {
     googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
   },
-
-  comment: {
-    // If you want to use a commenting system other than giscus you have to add it to the
-    // content security policy in the `next.config.js` file.
-    // Select a provider and use the environment variables associated to it
-    // https://vercel.com/docs/environment-variables
-    provider: 'disqus', // supported providers: giscus, utterances, disqus
-
-    disqusConfig: {
-      // https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-      shortname: 'albourane',
-    },
-  },
 }
 
 module.exports = siteMetadata

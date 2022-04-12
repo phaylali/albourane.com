@@ -5,9 +5,7 @@ import { BlogSEO } from '@/components/SEO'
 import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import DisqusComponent from '@/components/comments/Disqus'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import Comments from '@/components/Disqus'
 
 import {
   FacebookShareButton,
@@ -189,9 +187,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 </Link>
               </div>
             </footer>
-          </div>
-          <div className="py-4 xl:py-8">
-            <Comments slug={`${slug}`} title={`${title}`}></Comments>
           </div>
         </div>
       </article>

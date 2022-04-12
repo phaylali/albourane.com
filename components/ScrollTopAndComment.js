@@ -1,4 +1,3 @@
-import siteMetadata from '@/data/siteMetadata'
 import { useEffect, useState } from 'react'
 import smoothscroll from 'smoothscroll-polyfill'
 

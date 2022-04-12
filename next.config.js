@@ -4,14 +4,14 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
-  default-src 'self' disqus.com albourane.disqus.com *.disquscdn.com chirpy.dev;
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' albourane.disqus.com *.disquscdn.com chirpy.dev;
-  style-src 'self' 'unsafe-inline' fonts.googleapis.com *.disquscdn.com;
+  default-src 'self'fonts.googleapis.com fonts.gstatic.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline';
+  style-src 'self' 'unsafe-inline' fonts.googleapis.com;
   img-src * blob: data:;
   media-src 'none';
   connect-src *;
   font-src 'self' fonts.googleapis.com fonts.gstatic.com;
-  frame-src disqus.com *.disqus.com disqus.com chirpy.dev *.disquscdn.com
+  frame-src 'self'
 `
 
 const securityHeaders = [
@@ -49,10 +49,6 @@ const securityHeaders = [
   {
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=()',
-  },
-  {
-    key: 'Access-Control-Allow-Origin',
-    value: '*',
   },
 ]
 
