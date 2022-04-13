@@ -4,14 +4,14 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
-  default-src 'self' fonts.googleapis.com fonts.gstatic.com;
-  script-src 'self' 'unsafe-eval' 'unsafe-inline';
+  default-src 'self' fonts.googleapis.com fonts.gstatic.com windfinder.com *.windfinder.com rapidapi.com *.rapidapi.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' windfinder.com *.windfinder.com rapidapi.com *.rapidapi.com;
   style-src 'self' 'unsafe-inline' fonts.googleapis.com;
   img-src * blob: data:;
   media-src 'none';
   connect-src *;
   font-src 'self' fonts.googleapis.com fonts.gstatic.com;
-  frame-src 'self'
+  frame-src 'self' windfinder.com *.windfinder.com rapidapi.com *.rapidapi.com
 `
 
 const securityHeaders = [
@@ -28,7 +28,7 @@ const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
   {
     key: 'X-Frame-Options',
-    value: 'DENY',
+    value: 'ALLOW',
   },
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
   {
