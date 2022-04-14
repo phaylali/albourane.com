@@ -105,12 +105,14 @@ export const BlogSEO = ({
       return {
         '@type': 'Person',
         name: author.name,
+        url: `${siteMetadata.siteUrl}/about`,
       }
     })
   } else {
     authorList = {
       '@type': 'Person',
       name: siteMetadata.author,
+      url: `${siteMetadata.siteUrl}/about`,
     }
   }
 
