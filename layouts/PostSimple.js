@@ -15,6 +15,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       <BlogSEO
         url={`${siteMetadata.siteUrl}/blog/${frontMatter.slug}`}
         images={frontMatter.images}
+        banner={frontMatter.banner}
         {...frontMatter}
       />
       <ScrollTopAndComment />

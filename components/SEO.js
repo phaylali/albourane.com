@@ -80,6 +80,7 @@ export const BlogSEO = ({
   url,
   images = [],
   canonicalUrl,
+  banner,
 }) => {
   const router = useRouter()
   const publishedAt = new Date(date).toISOString()
@@ -144,8 +145,10 @@ export const BlogSEO = ({
         title={title}
         description={summary}
         ogType="article"
-        ogImage={featuredImages}
-        twImage={twImageUrl}
+        /*ogImage={featuredImages}*/
+        /*twImage={twImageUrl}*/
+        ogImage={banner}
+        twImage={banner}
         canonicalUrl={canonicalUrl}
       />
       <Head>
