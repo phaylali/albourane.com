@@ -50,7 +50,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
         <ul>
           {!filteredBlogPosts.length && 'لا يوجد مقالات'}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags, image } = frontMatter
+            const { slug, date, title, summary, tags, images } = frontMatter
             return (
               <li key={slug} className="py-4">
                 <article>
@@ -66,7 +66,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                       <div className="mx-2 my-8 w-full sm:my-0 sm:w-1/3">
                         <Link href={`/blog/${slug}`}>
                           <div className="overflow-hidden rounded-xl sm:px-0">
-                            <CustomImage src={`${image}`} alt={`${title} Cover`}></CustomImage>
+                            <CustomImage src={`${images[0]}`} alt={`${title} Cover`}></CustomImage>
                           </div>
                         </Link>
                       </div>

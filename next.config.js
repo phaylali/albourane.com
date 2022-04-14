@@ -4,14 +4,14 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
-  default-src 'self' fonts.googleapis.com fonts.gstatic.com windfinder.com *.windfinder.com rapidapi.com *.rapidapi.com;
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' windfinder.com *.windfinder.com rapidapi.com *.rapidapi.com;
+  default-src 'self' fonts.googleapis.com fonts.gstatic.com youtube.com *.youtube.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' youtube.com *.youtube.com;
   style-src 'self' 'unsafe-inline' fonts.googleapis.com;
   img-src * blob: data:;
   media-src 'none';
   connect-src *;
   font-src 'self' fonts.googleapis.com fonts.gstatic.com;
-  frame-src 'self' windfinder.com *.windfinder.com rapidapi.com *.rapidapi.com
+  frame-src 'self' youtube.com *.youtube.com
 `
 
 const securityHeaders = [

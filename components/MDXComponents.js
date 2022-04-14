@@ -4,6 +4,7 @@ import { getMDXComponent } from 'mdx-bundler/client'
 import Image from './Image'
 import CustomLink from './Link'
 import CustomImage from './CustomImage'
+import Youtube from './Youtube'
 import TOCInline from './TOCInline'
 import Pre from './Pre'
 
@@ -11,6 +12,7 @@ export const MDXComponents = {
   Image,
   TOCInline,
   CustomImage,
+  Youtube,
   a: CustomLink,
   pre: Pre,
 

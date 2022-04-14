@@ -31,7 +31,7 @@ export default function Home({ posts }) {
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'لا يوجد مقالات'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags, image } = frontMatter
+            const { slug, date, title, summary, tags, images } = frontMatter
             return (
               <li key={slug} className="py-12">
                 <article>
@@ -47,7 +47,7 @@ export default function Home({ posts }) {
                       <div className="mx-2 my-8 w-full sm:my-0 sm:w-1/3">
                         <Link href={`/blog/${slug}`}>
                           <div className="overflow-hidden rounded-xl sm:px-0">
-                            <CustomImage src={`${image}`} alt={`${title} Cover`}></CustomImage>
+                            <CustomImage src={`${images[0]}`} alt={`${title} Cover`}></CustomImage>
                           </div>
                         </Link>
                       </div>
