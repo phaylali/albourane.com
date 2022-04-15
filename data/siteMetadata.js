@@ -20,7 +20,7 @@ const siteMetadata = {
   instagram: 'https://www.instagram.com/albourane',
   locale: 'ar-MA',
   analytics: {
-    googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
+    googleAnalyticsId: 'G-N4Z1DH1BFH', // e.g. UA-000000-2 or G-XXXXXXX
   },
 }
 
