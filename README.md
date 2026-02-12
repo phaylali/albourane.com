@@ -67,3 +67,5 @@ bun run build
 ---
 
 _Dedicated to the fishermen of Oued Laou._ 🇲🇦
+_With love from Morocco._
+_Brought to you by Omniversify._
