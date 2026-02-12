@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>موقع ألبوران | Albourane Website</title>
+      <link>https://albourane.omniversify.com/blog</link>
+      <description>موقع ألبوران يهتم بكل ما يخص الصيد البحري التقليدي بصفة عامة و تعاونية ألبوران للصيد البحري التقليدي بوادي لو بصفة خاصة</description>
+      <language>ar-MA</language>
+      <managingEditor>albourane@gmail.com (تعاونية ألبوران)</managingEditor>
+      <webMaster>albourane@gmail.com (تعاونية ألبوران)</webMaster>
+      <lastBuildDate>Tue, 05 Apr 2022 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://albourane.omniversify.com/tags/اخبار/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://albourane.omniversify.com/blog/natural-catastrophe-albourane-pda-ouedlaou</guid>
+    <title>كارثة طبيعية بنقطة التفريغ المجهزة بوادي لو</title>
+    <link>https://albourane.omniversify.com/blog/natural-catastrophe-albourane-pda-ouedlaou</link>
+    <description>حلت بنقطة التفريغ المجهزة بوادي لو كارثة طبيعية تلخصت في رياح عاتية، أمواج عالية و أمطار غزيرة، تسببت في خسائر مادية جسيمة</description>
+    <pubDate>Tue, 05 Apr 2022 00:00:00 GMT</pubDate>
+    <author>albourane@gmail.com (تعاونية ألبوران)</author>
+    <category>اخبار</category>
+  </item>
+
+    </channel>
+  </rss>
