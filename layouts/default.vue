@@ -3,8 +3,9 @@ import siteMetadata from '@/data/siteMetadata'
 
 const navLinks = [
   { href: '/blog', title: 'Blog' },
+  { href: '/projects', title: 'Projects' },
   { href: '/about', title: 'About' },
-  { href: '/contact', title: 'Contact' }, // Added Contact page link
+  { href: '/contact', title: 'Contact' },
 ]
 
 const colorMode = useColorMode()
